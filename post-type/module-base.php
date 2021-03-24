@@ -2,22 +2,22 @@
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 /**
- * Class Disciple_Tools_Plugin_Starter_Template_Base
+ * Class Disciple_Tools_Meetings_Base
  * Load the core post type hooks into the Disciple Tools system
  */
-class Disciple_Tools_Plugin_Starter_Template_Base extends DT_Module_Base {
+class Disciple_Tools_Meetings_Base extends DT_Module_Base {
 
     /**
      * Define post type variables
      * @todo update these variables with your post_type, module key, and names.
      * @var string
      */
-    public $post_type = "starter_post_type";
+    public $post_type = "meetings";
     public $module = "starter_base";
     public $single_name = 'Starter';
     public $plural_name = 'Starters';
     public static function post_type(){
-        return 'starter_post_type';
+        return 'meetings';
     }
 
     private static $_instance = null;
@@ -111,27 +111,6 @@ class Disciple_Tools_Plugin_Starter_Template_Base extends DT_Module_Base {
              * Basic framework fields used by post-type base
              * recommended to leave these alone
              */
-            $fields['tags'] = [
-                'name'        => __( 'Tags', 'disciple_tools' ),
-                'description' => _x( 'A useful way to group related items.', 'Optional Documentation', 'disciple_tools' ),
-                'type'        => 'multi_select',
-                'default'     => [],
-                'tile'        => 'other',
-                'custom_display' => true,
-            ];
-            $fields["follow"] = [
-                'name'        => __( 'Follow', 'disciple_tools' ),
-                'type'        => 'multi_select',
-                'default'     => [],
-                'section'     => 'misc',
-                'hidden'      => true
-            ];
-            $fields["unfollow"] = [
-                'name'        => __( 'Un-Follow', 'disciple_tools' ),
-                'type'        => 'multi_select',
-                'default'     => [],
-                'hidden'      => true
-            ];
             $fields['tasks'] = [
                 'name' => __( 'Tasks', 'disciple_tools' ),
                 'type' => 'post_user_meta',
