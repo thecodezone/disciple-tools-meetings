@@ -87,7 +87,7 @@ class Disciple_Tools_Meetings_Base  {
                 "tile" => "status",
                 "in_create_form" => true
             ];
-            $fields["notes"] = [
+            $fields["meeting_notes"] = [
                 "name" => "Meeting Notes",
                 "type" => "text",
                 "tile" => "details",
