@@ -24,7 +24,7 @@
   },
   "icon": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-meetings/master/meetings-icon.png",
   "sections": {
-    "description": "Track you group meetings",
+    "description": "Track your group meetings",
     "installation": "(Required) You must have Disciple.Tools Theme installed before using this plugin. Once Disciple.Tools is installed, you can use the normal Plugin system to install the plugin.",
     "changelog": ""
   }
