@@ -19,8 +19,8 @@
   "tested": "5.6",
   "upgrade_notice": "Upgrade to get the latest features.",
   "banners": {
-    "low": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-meetings/master/meetings-banner.png",
-    "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-meetings/master/meetings-banner.png"
+    "low": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-meetings/0f67173d4c40db73b3e6b2fb115ddaa1df4b6506/meetings-banner.png",
+    "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-meetings/0f67173d4c40db73b3e6b2fb115ddaa1df4b6506/meetings-banner.png"
   },
   "icon": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-meetings/master/meetings-icon.png",
   "sections": {

@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-meetings.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-meetings)
 
-![Meetings](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-meetings/master/meetings-banner.png)
+![Meetings](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-meetings/0f67173d4c40db73b3e6b2fb115ddaa1df4b6506/meetings-banner.png)
 # Disciple Tools - Meetings
 
 This plugin is a proof of concept and not yet intended to be used in the field.
