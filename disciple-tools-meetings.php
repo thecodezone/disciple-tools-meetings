@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Disciple Tools - Meetings Proof of Concept
+ *Plugin Name: Disciple.Tools - Meetings Proof of Concept
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-meetings
  * Description: Track your group meetings.
  * Text Domain: disciple-tools-meetings
