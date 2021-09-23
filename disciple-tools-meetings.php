@@ -37,7 +37,7 @@ function disciple_tools_meetings() {
     /*
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
-    $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
+    $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple.Tools" || $wp_theme->name === "Disciple.Tools";
     if ( $is_theme_dt && version_compare( $version, $disciple_tools_meetings_required_dt_theme_version, "<" ) ) {
         add_action( 'admin_notices', 'disciple_tools_meetings_hook_admin_notice' );
         add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
@@ -76,7 +76,7 @@ class Disciple_Tools_Meetings {
 
     private function __construct() {
 
-        require_once( 'post-type/loader.php' ); // add starter post type extension to Disciple Tools system
+        require_once( 'post-type/loader.php' ); // add starter post type extension to Disciple.Tools system
 
         $this->i18n();
 
@@ -179,9 +179,9 @@ if ( ! function_exists( 'disciple_tools_meetings_hook_admin_notice' ) ) {
         global $disciple_tools_meetings_required_dt_theme_version;
         $wp_theme = wp_get_theme();
         $current_version = $wp_theme->version;
-        $message = "'Disciple Tools - Meetings' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.";
+        $message = "'Disciple.Tools - Meetings' plugin requires 'Disciple.Tools' theme to work. Please activate 'Disciple.Tools' theme or make sure it is latest version.";
         if ( $wp_theme->get_template() === "disciple-tools-theme" ){
-            $message .= ' ' . sprintf( esc_html( 'Current Disciple Tools version: %1$s, required version: %2$s' ), esc_html( $current_version ), esc_html( $disciple_tools_meetings_required_dt_theme_version ) );
+            $message .= ' ' . sprintf( esc_html( 'Current Disciple.Tools version: %1$s, required version: %2$s' ), esc_html( $current_version ), esc_html( $disciple_tools_meetings_required_dt_theme_version ) );
         }
         // Check if it's been dismissed...
         if ( ! get_option( 'dismissed-disciple-tools-meetings', false ) ) { ?>
