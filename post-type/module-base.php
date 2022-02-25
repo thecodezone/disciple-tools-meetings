@@ -109,9 +109,23 @@ class Disciple_Tools_Meetings_Base  {
             ];
             $fields["meeting_notes"] = [
                 "name" => "Meeting Notes",
-                "type" => "text",
+                "type" => "textarea",
                 "tile" => "details",
-                "in_create_form" => true
+            ];
+            $fields['type'] = [
+                "name" => "Meeting Type",
+                "type" => "key_select",
+                "required" => true,
+                "tile" => "status",
+                "in_create_form" => true,
+                "default" => apply_filters("disciple_tools_meetings_types", [
+                        "default" => [
+                            "label" => __( 'Default', 'disciple_tools_meetings' ),
+                            "description" => __( 'General purpose', 'disciple_tools_meetings' )
+                        ]
+                    ]
+                ),
+
             ];
             $fields["contacts"] = [
                 "name" => "Contacts",
