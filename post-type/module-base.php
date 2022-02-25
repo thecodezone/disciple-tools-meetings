@@ -49,13 +49,32 @@ class Disciple_Tools_Meetings_Base  {
         //list
         add_filter( "dt_user_list_filters", [ $this, "dt_user_list_filters" ], 10, 2 );
         add_filter( "dt_filter_access_permissions", [ $this, "dt_filter_access_permissions" ], 20, 2 );
-
+        add_filter( "dt_capabilities", [ $this, "dt_capabilities" ], 100, 1 );
     }
 
     public function after_setup_theme(){
         if ( class_exists( 'Disciple_Tools_Post_Type_Template' ) ) {
             new Disciple_Tools_Post_Type_Template( $this->post_type, $this->single_name, $this->plural_name );
         }
+    }
+
+    /**
+     * Adding capability meta.
+     */
+    public function dt_capabilities( $capabilities ){
+        $capabilities['access_meetings'] = [
+            'source' => 'Meetings',
+            'description' => 'The user can view meetings.'
+        ];
+        $capabilities['update_meetings'] = [
+            'source' => 'Meetings',
+            'description' => 'The user can edit existing existing.'
+        ];
+        $capabilities['create_meetings'] = [
+            'source' => 'Meetings',
+            'description' => 'The user can create meetings.'
+        ];
+        return $capabilities;
     }
 
     /**
@@ -66,6 +85,7 @@ class Disciple_Tools_Meetings_Base  {
 
         // if the user can access contact they also can access this post type
         foreach ( $expected_roles as $role => $role_value ){
+
             if ( isset( $expected_roles[$role]["permissions"]['access_groups'] ) && $expected_roles[$role]["permissions"]['access_groups'] ){
                 $expected_roles[$role]["permissions"]["access_meetings"] = true;
                 $expected_roles[$role]["permissions"]["update_meetings"] = true;
