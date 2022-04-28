@@ -6,7 +6,6 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
  * Load the core post type hooks into the Disciple.Tools system
  */
 class Disciple_Tools_Meetings_Base  {
-
     /**
      * Define post type variables
      * @var string
@@ -125,7 +124,6 @@ class Disciple_Tools_Meetings_Base  {
                         ]
                     ]
                 ),
-
             ];
             $fields["contacts"] = [
                 "name" => "Contacts",
@@ -135,6 +133,16 @@ class Disciple_Tools_Meetings_Base  {
                 "tile" => "other",
                 "p2p_key" => "meetings_to_contacts",
             ];
+            $fields['assigned_to'] = [
+                'name'        => 'Leader',
+                'type'        => 'user_select',
+                'default'     => '',
+                'tile'        => 'status',
+                'icon' => get_template_directory_uri() . "/dt-assets/images/assigned-to.svg?v=2",
+                "show_in_table" => 25,
+                "custom_display" => false,
+                "in_create_form" => true
+            ];
             $fields["groups"] = [
                 "name" => "Groups",
                 "type" => "connection",
@@ -142,6 +150,13 @@ class Disciple_Tools_Meetings_Base  {
                 "post_type" => "groups",
                 "tile" => "other",
                 "p2p_key" => "meetings_to_groups"
+            ];
+            $fields['series'] = [
+                'name'        => __( 'Series', 'disciple_tools' ),
+                'description' => __( 'Used to group meetings together.', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'tags',
+                'default'     => [],
+                'tile'        => 'other',
             ];
             $fields['tags'] = [
                 'name'        => __( 'Tags', 'disciple_tools' ),
