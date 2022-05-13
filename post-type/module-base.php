@@ -110,7 +110,6 @@ class Disciple_Tools_Meetings_Base  {
                 "name" => "Meeting Notes",
                 "type" => "textarea",
                 "tile" => "details",
-                "in_create_form" => true
             ];
             $fields['type'] = [
                 "name" => "Meeting Type",
