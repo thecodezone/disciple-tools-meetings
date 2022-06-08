@@ -180,8 +180,8 @@ class Disciple_Tools_Meetings_Base  {
             $fields['meetings_led'] = [
                 "name" => "Leader of meetings",
                 "type" => "connection",
-                "p2p_direction" => "to",
-                "post_type" => "contacts",
+                "p2p_direction" => "from",
+                "post_type" => "meetings",
                 "tile" => "other",
                 "p2p_key" => "meetings_to_leaders"
             ];
