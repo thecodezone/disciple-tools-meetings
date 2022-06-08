@@ -176,6 +176,15 @@ class Disciple_Tools_Meetings_Base  {
                 "tile" => "other",
                 "p2p_key" => "meetings_to_contacts"
             ];
+
+            $fields['meetings_led'] = [
+                "name" => "Leader of meetings",
+                "type" => "connection",
+                "p2p_direction" => "to",
+                "post_type" => "contacts",
+                "tile" => "other",
+                "p2p_key" => "meetings_to_leaders"
+            ];
         }
         if ( $post_type === "groups" ){
             $fields["meetings"] = [
