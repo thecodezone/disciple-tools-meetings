@@ -113,9 +113,9 @@ class Disciple_Tools_Meetings_Base  {
             $fields['type'] = [
                 "name" => "Meeting Type",
                 "type" => "key_select",
-                "required" => true,
                 "tile" => "details",
                 "in_create_form" => true,
+                "select_cannot_be_empty" => true,
                 "default" => apply_filters("disciple_tools_meetings_types", [
                         "default" => [
                             "label" => __( 'Default', 'disciple_tools_meetings' ),
@@ -190,7 +190,7 @@ class Disciple_Tools_Meetings_Base  {
 
         return $fields;
     }
-    
+
     /**
      * @link https://github.com/DiscipleTools/Documentation/blob/master/Theme-Core/field-and-tiles.md
      */
